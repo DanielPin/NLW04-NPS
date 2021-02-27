@@ -31,8 +31,8 @@ class SendMailController{
         // Salvar as informações na tabela surveysUser
 
         const surveyUser = surveysUsersRepository.create({
-            user_id: surveyAlreadyExists.id,
-            survey_id,
+            user_id: userAlreadyExists.id,
+            survey_id: surveyAlreadyExists.id
         });
 
         await surveysUsersRepository.save(surveyUser);
